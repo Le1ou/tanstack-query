@@ -1,6 +1,7 @@
 import { TaskDto, todoListApi } from "./api";
 import { useQuery } from "@tanstack/react-query";
 import { useCreateTodo } from "./use-create-todo";
+import { useDeleteTodo } from "./use-delete-todo";
 // import { keepPreviousData } from "@tanstack/react-query";
 // import { useState } from "react";
 
@@ -19,7 +20,8 @@ export function TodoList() {
   //   todoListApi.getTodoListQueryOptions({ page, enabled }),
   // );
 
-  const { handleCreate, isPending } = useCreateTodo();
+  const { handleCreate, createIsPending } = useCreateTodo();
+  const { handleDelete, delIsPending } = useDeleteTodo();
 
   const { data, error, isLoading, isPlaceholderData } = useQuery({
     ...todoListApi.getTodoListQueryOptions(),
@@ -40,7 +42,7 @@ export function TodoList() {
       <form className="flex gap-2 mb-5" onSubmit={handleCreate}>
         <input className="rounded p-2 border border-teal-500" type="text" name="text" />
         <button
-          disabled={isPending}
+          disabled={createIsPending}
           className="rounded p-2 border border-teal-500 disabled:opacity-50"
         >
           Создать
@@ -51,8 +53,15 @@ export function TodoList() {
       </button> */}
       <div className={"flex flex-col gap-4" + (isPlaceholderData ? " opacity-50" : "")}>
         {data.map((el: TaskDto) => (
-          <div className="border border-slate-300 rounded p-3" key={el.id}>
+          <div className="border border-slate-300 rounded p-3 flex justify-between" key={el.id}>
             {el.label}
+            <button
+              disabled={delIsPending}
+              onClick={() => handleDelete(el.id)}
+              className="text-rose-500 font-bold disabled:text-rose-300"
+            >
+              Удалить
+            </button>
           </div>
         ))}
       </div>

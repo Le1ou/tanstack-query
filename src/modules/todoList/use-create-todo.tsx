@@ -27,5 +27,5 @@ export function useCreateTodo() {
     evt.currentTarget.reset();
   };
 
-  return { handleCreate, isPending: createTodoMutation.isPending };
+  return { handleCreate, createIsPending: createTodoMutation.isPending };
 }
