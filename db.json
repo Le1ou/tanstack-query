@@ -1,54 +1,453 @@
 {
+  "users": [
+    {
+      "id": "1",
+      "login": "pasw123",
+      "password": "12345oll"
+    },
+    {
+      "id": "2",
+      "login": "john_doe",
+      "password": "securePass123"
+    },
+    {
+      "id": "3",
+      "login": "jane_smith",
+      "password": "pass4567"
+    }
+  ],
   "tasks": [
-    { "id": "1", "label": "Buy groceries", "done": false },
-    { "id": "2", "label": "Finish project report", "done": true },
-    { "id": "3", "label": "Call the bank", "done": false },
-    { "id": "4", "label": "Schedule doctor appointment", "done": true },
-    { "id": "5", "label": "Clean the house", "done": false },
-    { "id": "6", "label": "Reply to emails", "done": true },
-    { "id": "7", "label": "Prepare dinner", "done": false },
-    { "id": "8", "label": "Read a book", "done": true },
-    { "id": "9", "label": "Exercise for 30 minutes", "done": false },
-    { "id": "10", "label": "Fix the leaky faucet", "done": false },
-    { "id": "11", "label": "Plan weekend trip", "done": true },
-    { "id": "12", "label": "Pay utility bills", "done": false },
-    { "id": "13", "label": "Water the plants", "done": true },
-    { "id": "14", "label": "Review budget", "done": false },
-    { "id": "15", "label": "Update resume", "done": true },
-    { "id": "16", "label": "Watch a new movie", "done": false },
-    { "id": "17", "label": "Organize workspace", "done": true },
-    { "id": "18", "label": "Buy a birthday gift", "done": false },
-    { "id": "19", "label": "Take car for maintenance", "done": true },
-    { "id": "20", "label": "Learn a new recipe", "done": false },
-    { "id": "21", "label": "Plan a vacation", "done": true },
-    { "id": "22", "label": "Visit grandparents", "done": false },
-    { "id": "23", "label": "Sort out old clothes", "done": true },
-    { "id": "24", "label": "Write a blog post", "done": false },
-    { "id": "25", "label": "Renew gym membership", "done": true },
-    { "id": "26", "label": "Send thank-you notes", "done": false },
-    { "id": "27", "label": "Learn basic Spanish", "done": true },
-    { "id": "28", "label": "Go hiking", "done": false },
-    { "id": "29", "label": "Deep clean the fridge", "done": true },
-    { "id": "30", "label": "Set up a savings plan", "done": false },
-    { "id": "31", "label": "Buy a new laptop", "done": true },
-    { "id": "32", "label": "Listen to a podcast", "done": false },
-    { "id": "33", "label": "Try a new coffee place", "done": true },
-    { "id": "34", "label": "Paint the bedroom", "done": false },
-    { "id": "35", "label": "Meditate for 10 minutes", "done": true },
-    { "id": "36", "label": "Host a dinner party", "done": false },
-    { "id": "37", "label": "Organize digital files", "done": true },
-    { "id": "38", "label": "Visit an art museum", "done": false },
-    { "id": "39", "label": "Update personal website", "done": true },
-    { "id": "40", "label": "Sign up for a cooking class", "done": false },
-    { "id": "41", "label": "Declutter the garage", "done": true },
-    { "id": "42", "label": "Write a short story", "done": false },
-    { "id": "43", "label": "Go for a morning walk", "done": true },
-    { "id": "44", "label": "Upgrade home WiFi", "done": false },
-    { "id": "45", "label": "Take a day off social media", "done": true },
-    { "id": "46", "label": "Redecorate the living room", "done": false },
-    { "id": "47", "label": "Go stargazing", "done": true },
-    { "id": "48", "label": "Bake homemade bread", "done": false },
-    { "id": "49", "label": "Sign up for a marathon", "done": true },
-    { "id": "50", "label": "Write a letter to a friend", "done": false }
+    {
+      "id": "1",
+      "label": "Buy groceries",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "label": "Finish project report",
+      "done": true,
+      "userId": "2"
+    },
+    {
+      "id": "3",
+      "label": "Call the bank",
+      "done": false,
+      "userId": "3"
+    },
+    {
+      "id": "4",
+      "label": "Schedule doctor appointment",
+      "done": true,
+      "userId": "1"
+    },
+    {
+      "id": "5",
+      "label": "Clean the house",
+      "done": false,
+      "userId": "2"
+    },
+    {
+      "id": "6",
+      "label": "Reply to emails",
+      "done": true,
+      "userId": "3"
+    },
+    {
+      "id": "7",
+      "label": "Prepare dinner",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "8",
+      "label": "Read a book",
+      "done": true,
+      "userId": "2"
+    },
+    {
+      "id": "9",
+      "label": "Exercise for 30 minutes",
+      "done": false,
+      "userId": "3"
+    },
+    {
+      "id": "10",
+      "label": "Fix the leaky faucet",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "11",
+      "label": "Plan weekend trip",
+      "done": true,
+      "userId": "2"
+    },
+    {
+      "id": "12",
+      "label": "Pay utility bills",
+      "done": false,
+      "userId": "3"
+    },
+    {
+      "id": "13",
+      "label": "Water the plants",
+      "done": true,
+      "userId": "1"
+    },
+    {
+      "id": "14",
+      "label": "Review budget",
+      "done": false,
+      "userId": "2"
+    },
+    {
+      "id": "15",
+      "label": "Update resume",
+      "done": true,
+      "userId": "3"
+    },
+    {
+      "id": "16",
+      "label": "Watch a new movie",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "17",
+      "label": "Organize workspace",
+      "done": true,
+      "userId": "2"
+    },
+    {
+      "id": "18",
+      "label": "Buy a birthday gift",
+      "done": false,
+      "userId": "3"
+    },
+    {
+      "id": "19",
+      "label": "Take car for maintenance",
+      "done": true,
+      "userId": "1"
+    },
+    {
+      "id": "20",
+      "label": "Learn a new recipe",
+      "done": false,
+      "userId": "2"
+    },
+    {
+      "id": "21",
+      "label": "Plan a vacation",
+      "done": true,
+      "userId": "3"
+    },
+    {
+      "id": "22",
+      "label": "Visit grandparents",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "23",
+      "label": "Sort out old clothes",
+      "done": true,
+      "userId": "2"
+    },
+    {
+      "id": "24",
+      "label": "Write a blog post",
+      "done": false,
+      "userId": "3"
+    },
+    {
+      "id": "25",
+      "label": "Renew gym membership",
+      "done": true,
+      "userId": "1"
+    },
+    {
+      "id": "26",
+      "label": "Send thank-you notes",
+      "done": false,
+      "userId": "2"
+    },
+    {
+      "id": "27",
+      "label": "Learn basic Spanish",
+      "done": true,
+      "userId": "3"
+    },
+    {
+      "id": "28",
+      "label": "Go hiking",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "29",
+      "label": "Deep clean the fridge",
+      "done": true,
+      "userId": "2"
+    },
+    {
+      "id": "30",
+      "label": "Set up a savings plan",
+      "done": false,
+      "userId": "3"
+    },
+    {
+      "id": "31",
+      "label": "Buy a new laptop",
+      "done": true,
+      "userId": "1"
+    },
+    {
+      "id": "32",
+      "label": "Listen to a podcast",
+      "done": false,
+      "userId": "2"
+    },
+    {
+      "id": "33",
+      "label": "Try a new coffee place",
+      "done": true,
+      "userId": "3"
+    },
+    {
+      "id": "34",
+      "label": "Paint the bedroom",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "35",
+      "label": "Meditate for 10 minutes",
+      "done": true,
+      "userId": "2"
+    },
+    {
+      "id": "36",
+      "label": "Host a dinner party",
+      "done": false,
+      "userId": "3"
+    },
+    {
+      "id": "37",
+      "label": "Organize digital files",
+      "done": true,
+      "userId": "1"
+    },
+    {
+      "id": "38",
+      "label": "Visit an art museum",
+      "done": false,
+      "userId": "2"
+    },
+    {
+      "id": "39",
+      "label": "Update personal website",
+      "done": true,
+      "userId": "3"
+    },
+    {
+      "id": "40",
+      "label": "Sign up for a cooking class",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "41",
+      "label": "Declutter the garage",
+      "done": true,
+      "userId": "2"
+    },
+    {
+      "id": "42",
+      "label": "Write a short story",
+      "done": false,
+      "userId": "3"
+    },
+    {
+      "id": "43",
+      "label": "Go for a morning walk",
+      "done": true,
+      "userId": "1"
+    },
+    {
+      "id": "44",
+      "label": "Upgrade home WiFi",
+      "done": false,
+      "userId": "2"
+    },
+    {
+      "id": "45",
+      "label": "Take a day off social media",
+      "done": true,
+      "userId": "3"
+    },
+    {
+      "id": "46",
+      "label": "Redecorate the living room",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "47",
+      "label": "Go stargazing",
+      "done": true,
+      "userId": "2"
+    },
+    {
+      "id": "48",
+      "label": "Bake homemade bread",
+      "done": false,
+      "userId": "3"
+    },
+    {
+      "id": "49",
+      "label": "Sign up for a marathon",
+      "done": true,
+      "userId": "1"
+    },
+    {
+      "id": "50",
+      "label": "Write a letter to a friend",
+      "done": false,
+      "userId": "2"
+    },
+    {
+      "id": "hTcbIlH3Io3ynTmmXEiIL",
+      "label": "sdcs",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "qt8ZRsEUv0ea073QewoQT",
+      "label": "sdfs",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "n6pvVMCYmvxp8U8wexzED",
+      "label": "гулять",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "AR8Vlk3rNhCMa5Yc1lLxe",
+      "label": "sdfs",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "BtSlet8yyh_jtyWhMJDmJ",
+      "label": "sdfsfwf2f23",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "CG7odruzTQLH0jgHUgZoh",
+      "label": "sdfs",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "mzU7dF2z_3tujXAOqc_Ns",
+      "label": "dsfsf",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "MxJiubSIcmo0q5s0pL1pC",
+      "label": "sdfs",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "Npo-9Umu6xDH8nixK5XzT",
+      "label": "dd2ec",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "atbURHY0AY3iSAkbdjXOC",
+      "label": "ывмым",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "iyTdQQZB6Yh8LXidlJBnL",
+      "label": "ывмывм",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "tUDNp34LUGaEDeovU6EN4",
+      "label": "ывмывм",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "_fAWgHd7QBfkiFE4hXv9E",
+      "label": "ывм",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "v25zKXIcMV__B71bPLNkM",
+      "label": "ывм",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "Z_kpbQ1GiSz5hTyEiqYJf",
+      "label": "ц",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "rJh5iJxowiVEiAYVhpE_h",
+      "label": "мым",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "e4hmjYtgG-2XTss9bHr8n",
+      "label": "кппы",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "zuzXSB6MM64Y_YYupzi1_",
+      "label": "пывмц",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "SIIYr19i6DiwpEJaVeIVj",
+      "label": "о оь",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "DB60FZC32zo84hBnqcTea",
+      "label": "sdv s",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "-Gr0lybemoxojdlh5v_JW",
+      "label": "sdsv",
+      "done": false,
+      "userId": "1"
+    },
+    {
+      "id": "-WK_S8tYOzNSGmdrLCLfE",
+      "label": "vsd",
+      "done": false,
+      "userId": "1"
+    }
   ]
 }

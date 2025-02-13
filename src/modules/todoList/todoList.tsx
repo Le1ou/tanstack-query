@@ -1,16 +1,29 @@
-import { keepPreviousData, useQuery } from "@tanstack/react-query";
-import { todoListApi } from "./api";
-import { useState } from "react";
+import { TaskDto, todoListApi } from "./api";
+import { useQuery } from "@tanstack/react-query";
+import { useCreateTodo } from "./use-create-todo";
+// import { keepPreviousData } from "@tanstack/react-query";
+// import { useState } from "react";
 
 export function TodoList() {
-  const [page, setPage] = useState(1);
-  const [enabled, setEnable] = useState(false);
+  // const [page, setPage] = useState(1);
+  // const [enabled, setEnable] = useState(false);
+
+  // const { data, error, isLoading, isPlaceholderData } = useQuery({
+  //   queryKey: ["tasks", "list", page],
+  //   queryFn: (signal) => todoListApi.getTodoList( signal, { page }),
+  //   placeholderData: keepPreviousData,
+  //   enabled: enabled,
+  // })
+
+  // const { data, error, isLoading, isPlaceholderData } = useQuery(
+  //   todoListApi.getTodoListQueryOptions({ page, enabled }),
+  // );
+
+  const { handleCreate, isPending } = useCreateTodo();
 
   const { data, error, isLoading, isPlaceholderData } = useQuery({
-    queryKey: ["tasks", "list", page],
-    queryFn: ({ signal }) => todoListApi.getTodoList({ signal }, { page }),
-    placeholderData: keepPreviousData,
-    enabled: enabled,
+    ...todoListApi.getTodoListQueryOptions(),
+    select: (data) => data.toReversed(),
   });
 
   if (isLoading) {
@@ -24,19 +37,27 @@ export function TodoList() {
   return (
     <div className="p-5 mx-auto max-w-[1200px]">
       <h1 className="text-3xl font-bold underline mb-5">Todo List</h1>
-      <button className="cursor-pointer" onClick={() => setEnable((prevState) => !prevState)}>
-        Toggle enabled
-      </button>
+      <form className="flex gap-2 mb-5" onSubmit={handleCreate}>
+        <input className="rounded p-2 border border-teal-500" type="text" name="text" />
+        <button
+          disabled={isPending}
+          className="rounded p-2 border border-teal-500 disabled:opacity-50"
+        >
+          Создать
+        </button>
+      </form>
+      {/* <button className="cursor-pointer" onClick={() => setEnable((prevState) => !prevState)}>
+        {enabled ? "Toogle disable" : "Toogle enable"}
+      </button> */}
       <div className={"flex flex-col gap-4" + (isPlaceholderData ? " opacity-50" : "")}>
-        {data &&
-          data.data.map((el) => (
-            <div className="border border-slate-300 rounded p-3" key={el.id}>
-              {el.label}
-            </div>
-          ))}
+        {data.map((el: TaskDto) => (
+          <div className="border border-slate-300 rounded p-3" key={el.id}>
+            {el.label}
+          </div>
+        ))}
       </div>
       <div className="flex gap-2 mt-4">
-        <button
+        {/* <button
           className="p-3 rounded border border-teal-500 cursor-pointer"
           onClick={() => setPage((prevState) => Math.max(1, prevState - 1))}
         >
@@ -47,7 +68,7 @@ export function TodoList() {
           onClick={() => setPage((prevState) => Math.min(5, prevState + 1))}
         >
           Next
-        </button>
+        </button> */}
       </div>
     </div>
   );
