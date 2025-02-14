@@ -2,6 +2,7 @@ import { TaskDto, todoListApi } from "./api";
 import { useQuery } from "@tanstack/react-query";
 import { useCreateTodo } from "./use-create-todo";
 import { useDeleteTodo } from "./use-delete-todo";
+import { useToogleTodo } from "./use-toogle-todo";
 // import { keepPreviousData } from "@tanstack/react-query";
 // import { useState } from "react";
 
@@ -21,7 +22,8 @@ export function TodoList() {
   // );
 
   const { handleCreate, createIsPending } = useCreateTodo();
-  const { handleDelete, delIsPending } = useDeleteTodo();
+  const { handleDelete, getisPending } = useDeleteTodo();
+  const { toogleTodo } = useToogleTodo();
 
   const { data, error, isLoading, isPlaceholderData } = useQuery({
     ...todoListApi.getTodoListQueryOptions(),
@@ -54,9 +56,10 @@ export function TodoList() {
       <div className={"flex flex-col gap-4" + (isPlaceholderData ? " opacity-50" : "")}>
         {data.map((el: TaskDto) => (
           <div className="border border-slate-300 rounded p-3 flex justify-between" key={el.id}>
+            <input type="checkbox" checked={el.done} onChange={() => toogleTodo(el.id, el.done)} />
             {el.label}
             <button
-              disabled={delIsPending}
+              disabled={getisPending(el.id)}
               onClick={() => handleDelete(el.id)}
               className="text-rose-500 font-bold disabled:text-rose-300"
             >

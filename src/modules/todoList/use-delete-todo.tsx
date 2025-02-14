@@ -21,5 +21,11 @@ export function useDeleteTodo() {
     },
   });
 
-  return { handleDelete: deleteTodoMutation.mutate, delIsPending: deleteTodoMutation.isPending };
+  deleteTodoMutation.variables;
+
+  return {
+    handleDelete: deleteTodoMutation.mutate,
+    getisPending: (id: string) =>
+      deleteTodoMutation.isPending && deleteTodoMutation.variables === id,
+  };
 }

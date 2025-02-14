@@ -49,8 +49,8 @@ export const todoListApi = {
       json: data,
     });
   },
-  updateTodo(id: string, data: TaskDto) {
-    return jsonInstance(`/tasks/${id}`, {
+  updateTodo(data: TaskDto) {
+    return jsonInstance(`/tasks/${data.id}`, {
       method: "PATCH",
       json: data,
     });

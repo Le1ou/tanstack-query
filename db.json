@@ -278,7 +278,7 @@
     {
       "id": "44",
       "label": "Upgrade home WiFi",
-      "done": false,
+      "done": true,
       "userId": "2"
     },
     {
@@ -290,32 +290,8 @@
     {
       "id": "46",
       "label": "Redecorate the living room",
-      "done": false,
-      "userId": "1"
-    },
-    {
-      "id": "47",
-      "label": "Go stargazing",
-      "done": true,
-      "userId": "2"
-    },
-    {
-      "id": "48",
-      "label": "Bake homemade bread",
-      "done": false,
-      "userId": "3"
-    },
-    {
-      "id": "49",
-      "label": "Sign up for a marathon",
       "done": true,
       "userId": "1"
-    },
-    {
-      "id": "50",
-      "label": "Write a letter to a friend",
-      "done": false,
-      "userId": "2"
     }
   ]
 }
