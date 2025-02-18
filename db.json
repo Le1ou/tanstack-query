@@ -290,7 +290,7 @@
     {
       "id": "46",
       "label": "Redecorate the living room",
-      "done": true,
+      "done": false,
       "userId": "1"
     }
   ]
